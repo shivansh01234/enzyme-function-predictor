@@ -2,6 +2,17 @@ import streamlit as st
 import joblib
 import re
 
+st.sidebar.title("🔬 Navigation")
+st.sidebar.markdown("---")
+page = st.sidebar.radio("Select a Section:", ["Project Overview", "Clinical Data & Evaluation", "Live Diagnostic Engine"])
+
+st.sidebar.markdown("---")
+st.sidebar.info(
+    "**Engineer:** Shivansh Sahu\n\n"
+    "**Domain:** Enzyme engineering & Machine Learning\n\n"
+    "**Goal:** Translating raw genomic data into functional enzyme classifications using classical machine learning and biological NLP."
+)
+
 # --- 1. Page Configuration ---
 st.set_page_config(
     page_title="Enzyme Sequence Predictor",
